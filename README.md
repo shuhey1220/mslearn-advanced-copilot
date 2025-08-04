@@ -60,6 +60,72 @@ Finally, verify the new endpoint is working by trying it out by going to the `/d
 
 
 
+# mslearn-advanced-copilot
+
+このプロジェクトは dev container 上で動作するように構成されています。以下の手順でセットアップと実行が可能です。
+
+## 開発環境
+
+- OS: Debian GNU/Linux 11 (bullseye)
+- 必要なコマンドラインツールは dev container にプリインストールされています。
+
+## セットアップ手順
+
+1. **リポジトリのクローン**
+   ```sh
+   git clone <このリポジトリのURL>
+   cd mslearn-advanced-copilot
+   ```
+
+2. **dev container で開く**
+   - VS Code の「Remote - Containers」機能を使って dev container でプロジェクトを開いてください。
+
+3. **依存関係のインストール**
+   - プロジェクトで使用しているパッケージマネージャ（例: npm, pip など）に応じて以下のコマンドを実行してください。
+   - Node.js の場合:
+     ```sh
+     npm install
+     ```
+   - Python の場合:
+     ```sh
+     pip install -r requirements.txt
+     ```
+
+## 実行方法
+
+- Node.js アプリの場合:
+  ```sh
+  npm start
+  ```
+- Python アプリの場合:
+  ```sh
+  python main.py
+  ```
+
+## テストの実行
+
+- Node.js の場合:
+  ```sh
+  npm test
+  ```
+- Python の場合:
+  ```sh
+  pytest
+  ```
+
+## その他
+
+- 詳細なコマンドや設定は各種スクリプトや設定ファイル（package.json, requirements.txt など）を参照してください。
+- ホストのブラウザでウェブページを開く場合は、以下のコマンドを利用できます:
+  ```sh
+  "$BROWSER" <URL>
+  ```
+
+## サポート
+
+不明点があればプロジェクト管理者までお問い合わせください。
+
+
 # Legal Notices
 
 Microsoft and any contributors grant you a license to the Microsoft documentation and other content

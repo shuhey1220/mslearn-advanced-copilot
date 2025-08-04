@@ -35,6 +35,17 @@ def countries():
 def monthly_average(country: str, city: str, month: str):
     return data[country][city][month]
 
+# 国の都市情報を提供する新しいルートを作成してください。
+@app.get('/countries/{country}/{city}')
+def city_info(country: str, city: str):
+    """
+    指定された国の特定の都市の情報を返します。
+    """
+    if country in data and city in data[country]:
+        return data[country][city]
+    else:
+        return {"error": "City not found in the specified country."}
+
 # Generate the OpenAPI schema:
 openapi_schema = app.openapi()
 with open(join(wellknown_path, "openapi.json"), "w") as f:
